@@ -2,7 +2,7 @@ import Stripe from "stripe";
 
 import Link from "next/link";
 import Image from "next/future/image";
-import { GetStaticProps } from "next";
+import type { GetStaticProps } from "next/types";
 
 import { HomeContainer, Product } from "../styles/pages/home";
 import { stripe } from "../lib/stripe";
@@ -16,7 +16,7 @@ interface HomeProps {
     id: string;
     name: string;
     imageUrl: string;
-    price: number;
+    price: string;
   }[];
 }
 
